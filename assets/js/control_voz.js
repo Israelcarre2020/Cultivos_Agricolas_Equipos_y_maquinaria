@@ -20,7 +20,7 @@ function controlAudioSlides(numeroSlide) {
 
     switch (numeroSlide) {
         case 1:
-            audioActual = new Audio('assets/voz/U14D001.mp3');
+            audioActual = new Audio('assets/voz/sonido1_p1.mp3');
             break;
         case 2:
             $(`#wrapper>div>.tabs>button`).removeClass("active");
@@ -1067,6 +1067,29 @@ $('#carouselActividadAprendizaje5').on('slid.bs.carousel', function () {
 
     reproducirAudio(audioLocation);    
 })
+
+$('#carouselInicio').on('slid.bs.carousel', function () {
+    
+    var numeroSlide = $('#carouselInicio>div>div.active').index();
+    var audioLocation;
+
+    switch (numeroSlide) {
+        case 0:         
+            audioLocation = 'assets/voz/sonido1_p1.mp3';
+            break;
+        case 1:
+            audioLocation = 'assets/voz/Sonido2_p1mp3.mp3';
+            break;   
+         case 2:         
+            audioLocation = 'assets/voz/Sonido3_p1mp3.mp3';
+            break;
+        default:
+            break;
+    }
+
+    reproducirAudio(audioLocation);    
+})
+
 $('#carouselExampleIndicators4').on('slid.bs.carousel', function () {
     
     var numeroSlide = $('#carouselExampleIndicators4>div>div.active').index();

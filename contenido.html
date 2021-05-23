@@ -2299,8 +2299,11 @@
                         <div class="btn-group controls-slide" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-cloud" id="prevSlide" data-placement="bottom"><span
                                     class="ti-angle-double-left"></span></button>
-                            <button type="button" class="btn btn-cloud"><span class="ti-control-pause"></span></button>
-                            <button type="button" class="btn btn-cloud" id="nextSlide" data-placement="bottom"><span
+                                    <button type="button" class="btn btn-cloud">
+                                        <span id="pauseAudio" class="ti-control-pause"></span>
+                                          <span id="resumeAudio" class="ti-control-play" style="display: none;"></span>
+                                        </button>
+                            <button type="button"  class="btn btn-cloud" id="nextSlide" data-placement="bottom"><span
                                     class="ti-angle-double-right"></span></button>
                         </div>
                     </div>
