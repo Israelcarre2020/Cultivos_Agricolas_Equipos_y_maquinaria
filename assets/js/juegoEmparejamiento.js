@@ -26,7 +26,7 @@ function init() {
 
 
     for (var i = 1; i <= numbers.length; i++) {
-        $('<p class="btn btn-warning" style="width:100%">...</p>').data('number', i).appendTo('#cardSlots').droppable({
+        $('<p class="btn btn-warning" style="width:84%">...</p>').data('number', i).appendTo('#cardSlots').droppable({
             accept: '#cardPile p',
             hoverClass: 'hovered',
             drop: handleCardDrop,

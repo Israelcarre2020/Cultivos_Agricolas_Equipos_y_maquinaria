@@ -302,6 +302,7 @@ a.article:hover {
 
 .imagen100{
     width: 100%;
+    height: 100%;
 }
 
 .titulo-unidad{
@@ -878,6 +879,23 @@ a.article:hover {
       height: 40px;
       font-size: 12px;
    }
+}
+
+.img-fluid2{
+    width: 13rem;
+}
+
+@media screen and (min-width: 512px) {
+    
+.img-fluid2{
+    width: 18rem;
+}
+    
+ }
+
+
+.cerebro{
+  margin-left: 50px
 }
 
 .tablinks:before /* Gradient */ {
