@@ -64,23 +64,23 @@ function controlAudioSlides(numeroSlide) {
             $(`.menu_actidades2`).addClass("active_actividad");
             $("#quiz-restart-btn").click();
             $("#quiz-start-btn").click();          
-            audioActual = new Audio('assets/voz/U14D014.mp3');
+            audioActual = new Audio('assets/voz/Sonido25_p8mp3.mp3');
             break;            
         case 9:
             intentosJuego=0;
             //$("#carouselFrecuencia").carousel(0);
             $('#carouselActividadAprendizaje2').carousel(0);
-            audioActual = new Audio('assets/voz/U14D033.mp3');
+            audioActual = new Audio('assets/voz/Sonido32_p9mp3.mp3');
             break;            
         case 10:
             //$("#carouselGeneracionCorriente").carousel(0);
-            audioActual = new Audio('assets/voz/U14D035.mp3');
+            audioActual = new Audio('assets/voz/Sonido33_p10mp3.mp3');
             break;            
         case 11:          
-            audioActual = new Audio('assets/voz/U14D041.mp3');
+            audioActual = new Audio('assets/voz/Sonido34_p11mp3.mp3');
             break;            
         case 12:
-            audioActual = new Audio('assets/voz/U14D053.mp3');
+            audioActual = new Audio('assets/voz/Sonido36_p12mp3.mp3');
             break;
         case 13:      
             audioActual = new Audio('assets/voz/U14D060.mp3');
@@ -1122,10 +1122,16 @@ $('#carouselExampleIndicators4').on('slid.bs.carousel', function () {
 
     switch (numeroSlide) {
         case 0:
-            audioLocation = 'assets/voz/U14D077.mp3';
+            audioLocation = 'assets/voz/Sonido25_p8mp3.mp3';
             break;
         case 1:
-            audioLocation = 'assets/voz/U14D078.mp3';
+            audioLocation = 'assets/voz/Sonido26_p8mp3.mp3';
+            break;  
+        case 2:
+            audioLocation = 'assets/voz/Sonido28_p8mp3.mp3';
+            break;  
+        case 3:
+            audioLocation = 'assets/voz/lainformacion_necesaria.mp3';
             break;   
         default:
             break;
