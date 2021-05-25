@@ -175,22 +175,22 @@ function controlAudioSlides(numeroSlide) {
             /*$("#juegofv").html(htmljuego);
             iniciarJuegofv();*/
             $("#carouselActividadAprendizaje4").carousel(0);
-            audioActual = new Audio('assets/voz/U14D129.mp3');
+            audioActual = new Audio('assets/voz/Sonido66_p25mp3.mp3');
             break;   
         case 27:
             $(`.menu_actidades`).removeClass("active_actividad");
             $(`.menu_actidades4`).addClass("active_actividad");
-            audioActual = new Audio('assets/voz/Sonido66_p25mp3.mp3');
+            audioActual = new Audio('assets/voz/Sonido67_p26mp3.mp3');
             break; 
         case 28:
             $(`.menu_actidades`).removeClass("active_actividad");
             $(`.menu_actidades4`).addClass("active_actividad");
-            audioActual = new Audio('assets/voz/Sonido67_p26mp3.mp3');
+            audioActual = new Audio('assets/voz/Sonido68_p27mp3.mp3');
             break;
         case 29:
             $(`.menu_actidades`).removeClass("active_actividad");
             $(`.menu_actidades4`).addClass("active_actividad");
-            audioActual = new Audio('assets/voz/Sonido68_p27mp3.mp3');
+            audioActual = new Audio();
             break; 
         case 30:
             $(`.menu_actidades`).removeClass("active_actividad");
