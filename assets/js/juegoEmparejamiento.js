@@ -4,9 +4,11 @@ $(document).ready(function () {
     
     init();
 });
-function init() {
+
+function init2() {
     // Reset the game
     correctCards = 0;
+
     $('#cardPile').html('');
     $('#cardSlots').html('');
 
@@ -14,6 +16,45 @@ function init() {
     var columnaOrigen = ['TRATOR', 'TERMO NEBULIZADOR', 'BOMBA DE ESPALDA'];
     var numbers = [1, 2, 3];
     numbers.sort(function () { return Math.random() - .4 });
+
+    for (var i = 0; i < numbers.length; i++) {
+        $('<p class="btn btn-warning boton-juego emparejamiento_oculto" style="width:100%">' + columnaOrigen[numbers[i]-1] + '</p>').data('number', numbers[i]).attr('id', 'cardEmparejamiento' + numbers[i]).appendTo('#cardPile').draggable({
+            containment: '#contentEmparejamiento',
+            stack: '#cardPile p',
+            cursor: 'move',
+            revert: true
+        });
+    }
+
+
+    for (var i = 1; i <= numbers.length; i++) {
+        $('<p class="btn btn-warning" style="width:84%">...</p>').data('number', i).appendTo('#cardSlots').droppable({
+            accept: '#cardPile p',
+            hoverClass: 'hovered',
+            drop: handleCardDrop,
+            over: function(event, ui) {
+                ui.draggable.draggable('option','revert',false);
+            },
+            out: function(event, ui) {
+                ui.draggable.draggable('option','revert',true);
+            }
+        });
+    }
+    // Create the card slots
+
+}
+
+function init() {
+    // Reset the game
+    correctCards = 0;
+    intentosEmparejamiento = 0;
+    $('#cardPile').html('');
+    $('#cardSlots').html('');
+
+    // Create the pile of shuffled cards
+    var columnaOrigen = ['TRATOR', 'TERMO NEBULIZADOR', 'BOMBA DE ESPALDA'];
+    var numbers = [1, 2, 3];
+    numbers.sort(function () { return Math.random() - .3 });
 
     for (var i = 0; i < numbers.length; i++) {
         $('<p class="btn btn-warning boton-juego emparejamiento_oculto" style="width:100%">' + columnaOrigen[numbers[i]-1] + '</p>').data('number', numbers[i]).attr('id', 'cardEmparejamiento' + numbers[i]).appendTo('#cardPile').draggable({
@@ -96,13 +137,15 @@ function validarResultado(){
                 'warning'
             )
             intentosEmparejamiento = 0;
-            $(".emparejamiento_oculto").hide();
+            init();
+            //$(".emparejamiento_oculto").hide();
         } else {
             Swal.fire(
                 '¡Lo sentimos!',
                 'Puedes intentarlo de nuevo',
                 'error'
             )
+            init2();
         }
     }
 }
