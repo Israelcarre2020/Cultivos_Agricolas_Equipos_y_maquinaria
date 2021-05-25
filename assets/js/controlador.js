@@ -763,7 +763,7 @@ function iniciarJuegofv() {
 }
 
 $('#validarjuego3').off('click').on('click', function(){
-    if (intentosJuego > 1) {
+    if (intentosJuego > 0) {
         Swal.fire(
             '¡Has superado el número de intentos!',
             'Revisa los temas de la actividad de aprendizaje y vuelve a intentarlo',

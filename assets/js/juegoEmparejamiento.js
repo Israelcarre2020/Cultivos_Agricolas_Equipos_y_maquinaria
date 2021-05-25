@@ -138,7 +138,7 @@ function validarResultado(){
             )
             intentosEmparejamiento = 0;
             init();
-            //$(".emparejamiento_oculto").hide();
+            $(".emparejamiento_oculto").hide();
         } else {
             Swal.fire(
                 '¡Lo sentimos!',
